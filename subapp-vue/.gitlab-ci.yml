@@ -1,0 +1,35 @@
+stages:
+  - test
+  - prod
+
+test:
+  stage: test
+  only:
+    - develop
+  script:
+    - echo zkyth-front test环境部署 start
+    - cd /data/xitalent/zkyth/front/zkyth-front
+    - git pull
+    - yarn install
+    - yarn build
+    - rm -rf ../www/*
+    - mv dist/* ../www
+    - echo zkyth-front test环境部署 end
+  tags:
+    - zk-front-test
+
+prod:
+  stage: prod
+  only:
+    - master
+  script:
+    - echo zkyth-front test环境部署 start
+    - cd /data/xitalent/zkyth/front/zkyth-front
+    - git pull
+    - yarn install
+    - yarn build
+    - rm -rf ../www/*
+    - mv dist/* ../www
+    - echo zkyth-front test环境部署 end
+  tags:
+    - zk-front-prod

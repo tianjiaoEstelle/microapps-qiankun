@@ -1,0 +1,8 @@
+{
+  "jobsId": 1,
+  "userId": "zzz",
+  "data": {
+    "basic": "{\"sex\":\"男\",\"name\":\"张三\",\"nation\":\"汉族\",\"birthday\":\"2022-08-01\"}",
+    "education": "[{\"schoolName\":\"浙江大学\",\"major\":\"计算机技术\"},{\"schoolName\":\"清华大学\",\"major\":\"化学\"}]"
+  }
+}
